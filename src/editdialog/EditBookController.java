@@ -13,11 +13,9 @@ import java.util.List;
 import java.util.Map;
 
 public class EditBookController extends ADataPageController<Media> implements IDataManageController<Media> {
-    private MediaApi api;
 
     public EditBookController() {
         super();
-        api = new MediaApi();
     }
 
     @Override
@@ -37,7 +35,7 @@ public class EditBookController extends ADataPageController<Media> implements ID
 
     @Override
     public void update(Media media) {
-        api.updateBook((Book) media);
+        new MediaApi().updateBook((Book) media);
     }
 
     @Override

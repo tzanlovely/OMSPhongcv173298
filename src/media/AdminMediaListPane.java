@@ -12,10 +12,10 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AdminMediaListPane extends UserMediaListPane {
+public class AdminMediaListPane extends ADataListPane<Media> {
 
     public AdminMediaListPane(ADataPageController<Media> controller) {
-        super(controller);
+        this.controller = controller;
     }
 
     @Override
